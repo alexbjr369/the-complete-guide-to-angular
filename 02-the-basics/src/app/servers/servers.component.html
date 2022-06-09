@@ -1,12 +1,5 @@
 <label for="input">Server Name</label>
-<input
-  class="form-control"
-  id="input"
-  type="text"
-  (input)="onUpdateServerName($event)"
-/>
 <input class="form-control" id="input" type="text" [(ngModel)]="serverName" />
-<p>{{ serverName }}</p>
 <button
   class="btn btn-primary"
   [disabled]="!allowNewServer"
