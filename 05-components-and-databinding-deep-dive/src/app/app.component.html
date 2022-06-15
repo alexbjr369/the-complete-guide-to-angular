@@ -18,8 +18,8 @@
   <hr />
   <div class="row">
     <div class="col-xs-12">
-      <div class="panel panel-default" *ngFor="let element of serverElements">
-        <div class="panel-heading">{{ element.name }}</div>
+      <div class="card" *ngFor="let element of serverElements">
+        <h5 class="card-title">{{ element.name }}</h5>
         <div class="panel-body">
           <p>
             <strong *ngIf="element.type === 'server'" style="color: red">{{
