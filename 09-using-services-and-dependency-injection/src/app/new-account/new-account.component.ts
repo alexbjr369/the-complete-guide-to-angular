@@ -7,7 +7,11 @@ import { AccountService } from '../services/account/account.service';
   styleUrls: ['./new-account.component.scss'],
 })
 export class NewAccountComponent implements OnInit {
-  constructor(private accountService: AccountService) {}
+  constructor(private accountService: AccountService) {
+    this.accountService.statusUpdated.subscribe((status: string) =>
+      alert('New Status: ' + status)
+    );
+  }
 
   ngOnInit(): void {}
 
